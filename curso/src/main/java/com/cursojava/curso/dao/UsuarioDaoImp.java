@@ -72,8 +72,10 @@ public class UsuarioDaoImp implements UsuarioDao{
         Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
         boolean laPassCoincide = argon2.verify(passwordHashed, usr.getPassword());
         if (laPassCoincide){
+            System.out.println("asdfg las cosas coinciden");
             return lista.get(0);
         }else{
+            System.out.println("asdfg cred incorrectas");
             return null;
         }
 

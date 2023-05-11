@@ -23,5 +23,7 @@ public class Usuario {
     private String telefono;
     @Getter @Setter @Column(name="password")
     private String password;
+    @Getter @Setter @Column(name="tipo")
+    private int tipo;
 
 }

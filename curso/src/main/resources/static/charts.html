@@ -33,9 +33,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <img src="http://10.107.226.241/assets/caja.png" width="60" height="60">
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Informes <sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -96,43 +96,32 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Reportes
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Local 100</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="registrar.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">Local 100:</h6>
+                        <a class="collapse-item" onclick="reportear('charts')"><i class="fas fa-fw fa-chart-bar"></i> DD C&C</a>
+                        <a class="collapse-item" onclick="reportear('antiguedad')"><i class="fa fa-hourglass-end"></i> Antigüedad</a>
+                        <a class="collapse-item" onclick="reportear('stock')"><i class="fas fa-fw fa-chart-pie"></i> Stock</a>
+                        <a class="collapse-item" onclick="reportear('traspasos')"><i class="fas fa-fw fa-chart-bar"></i> Traspasos</a>
+                        <a class="collapse-item" onclick="reportear('tracking')"><i class="fa fa-users"></i> Tracking</a>
+                        <a class="collapse-item" onclick="reportear('pkt')"><i class="fa fa-tasks"></i> Ordenes</a>
+                        <a class="collapse-item" onclick="reportear('sameday')"><i class="fa fa-truck"></i> SameDay</a>
+                        <a class="collapse-item" onclick="reportear('capacidades')"><i class="fa fa-spinner"></i> Capacidades</a>
                     </div>
                 </div>
             </li>
-
             <!-- Nav Item - Charts -->
-            <li class="nav-item active">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -355,7 +344,7 @@
                 </nav>
 
                                 <div width="1650" height="1000" >
-                                    <iframe src="http://10.107.226.241:8050/clu/" width="1600" height="950" scrollbar="auto"></iframe>
+                                    <iframe id="mifra" src="http://10.107.226.241:8050/clu/" width="1600" height="950" scrollbar="auto"></iframe>
                                 </div>
 
             </div>
@@ -365,7 +354,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Operaciones logísticas omnicanal</span>
                     </div>
                 </div>
             </footer>
@@ -418,7 +407,7 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/chart-bar-demo.js"></script>
-
+    <script src="js/reportear.js"></script>
 </body>
 
 </html>
