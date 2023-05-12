@@ -3,7 +3,7 @@
 
   function subm() {
     var email = document.getElementById("input-correo-electronico").value;
-
+    console.log(email);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/recuperar-contrasena", true);
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -18,6 +18,7 @@
         }
     };
 
-    var data = JSON.stringify({ email: email });
-    xhr.send(data);
+    //var data = JSON.stringify({ email: email });
+    
+    xhr.send(email);
 };

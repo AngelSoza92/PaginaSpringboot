@@ -1,5 +1,7 @@
 package com.cursojava.curso.dao;
 
+import org.springframework.stereotype.Repository;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,12 +10,14 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+@Repository
+public class RecuperacionDaoImp implements RecuperacionDao {
 
-public class RecuperacionDaoImp {
-
-    public static void enviarMail(String asunto, String mensaje, String destinatario) throws IOException, ProtocolException, IOException{
-
-        String POST_PARAMS = "message="+mensaje+"&subject="+asunto+"&to="+destinatario;
+    public void enviarMail(String asunto, String mensaje, String destinatario) throws IOException{
+        System.out.println(("daoimp:"+asunto));
+        System.out.println(("daoimp:"+mensaje));
+        System.out.println(("daoimp:"+destinatario));
+        String POST_PARAMS = "message="+mensaje+"&subject="+asunto+"&dick="+destinatario;
 
         URL obj = new URL("https://nodo51.cl/zend_mail_post_to");
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
