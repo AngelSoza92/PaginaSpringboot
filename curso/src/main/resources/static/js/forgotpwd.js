@@ -60,8 +60,6 @@ body: JSON.stringify({
     nvaClave: np1
 })
 });
-    
-    
        window.location.href='login.html'
     
 }

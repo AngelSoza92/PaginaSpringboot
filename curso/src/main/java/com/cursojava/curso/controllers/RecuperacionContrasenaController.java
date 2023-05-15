@@ -23,7 +23,7 @@ public class RecuperacionContrasenaController {
         System.out.println("enteró al RCC controller");
         // Envía un correo electrónico con un enlace que contiene el token o ID
         String asunto = "Recuperacion de cuenta";
-        String cuerpo = "Haz clic en el siguiente enlace para restablecer tu contrasena: http://localhost:8080/nuevaClave.html?token=";
+        String cuerpo = "Hola. Favor haga clic en el siguiente enlace para restablecer tu clave: http://localhost:8080/nuevaClave.html?token=";
         System.out.println("controller"+correoElectronico);
         recuperacionDao.enviarMail(asunto,cuerpo,correoElectronico);
     }
