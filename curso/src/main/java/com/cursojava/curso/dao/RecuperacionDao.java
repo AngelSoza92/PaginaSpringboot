@@ -4,4 +4,6 @@ import java.io.IOException;
 
 public interface RecuperacionDao {
     void enviarMail(String asunto, String cuerpo, String correoElectronico)  throws IOException;
+
+    void nuevaClave(String usrId, String nuevaClave);
 }

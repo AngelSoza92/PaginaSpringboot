@@ -1,5 +1,4 @@
 package com.cursojava.curso.controllers;
-
 import com.cursojava.curso.dao.UsuarioDao;
 import com.cursojava.curso.models.Usuario;
 import com.cursojava.curso.utils.JWTUtil;
@@ -7,7 +6,6 @@ import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +26,6 @@ public class UsuarioController {
         else{
             return usuarioDao.getUsuarios();
         }
-
     }
 
     @RequestMapping(value="api/usr", method=RequestMethod.POST)
