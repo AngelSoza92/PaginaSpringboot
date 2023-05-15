@@ -23,7 +23,7 @@
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // Lógica para manejar la respuesta exitosa del servidor
-            alert("Se ha enviado un correo electrónico con las instrucciones para restablecer tu contraseña.");
+            alert("Se ha enviado un correo electrónico con las instrucciones para restablecer tu contraseña. Recuerde que el correo podría llegar a la carpea de correos no deseados o Spam");
         } else if (xhr.readyState === 4 && xhr.status !== 200) {
             // Lógica para manejar la respuesta de error del servidor
             alert("Ocurrió un error al enviar el correo electrónico de recuperación de contraseña.");
