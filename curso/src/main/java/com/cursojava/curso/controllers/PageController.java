@@ -18,7 +18,7 @@ public class PageController {
         System.out.println("el usr que estamos probando es: "+usrId);
         System.out.println("el token que estamos probando es: "+token);
         if (usrId ==null){
-            return null;
+            return "no autorizado";
         }
         else{
             return "respuesta";
