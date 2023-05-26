@@ -1,85 +1,59 @@
 function reportear(tipo){
-    if (tipo=='charts'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/asdf/";
-        iframe.src = argumento;
-    } else if(tipo=='antiguedad'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/antiguedad100/";
-        iframe.src = argumento;
-    }else if(tipo=='stock'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/stock100/";
-        iframe.src = argumento;
-    }else if(tipo=='traspasos'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/traspasos/";
-        iframe.src = argumento;
-    }else if(tipo=='tracking'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/tracking100/";
-        iframe.src = argumento;
-    }else if(tipo=='pkt'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/pkt100/";
-        iframe.src = argumento;
-    }else if(tipo=='sameday'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/samedaytodes/";
-        iframe.src = argumento;
-    }
-    else if(tipo=='capacidades'){
-        var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/capacidades/";
-        iframe.src = argumento;
-    }
-        else if (tipo=='charts12'){
-            var iframe = document.getElementById("mifra");
-            argumento="http://10.107.226.241:8051/clu/";
-            iframe.src = argumento;
-        } else if(tipo=='antiguedad12'){
-            var iframe = document.getElementById("mifra");
-            argumento="http://10.107.226.241:8051/antiguedad/";
-            iframe.src = argumento;
-        }else if(tipo=='stock12'){
-            var iframe = document.getElementById("mifra");
-            argumento="http://10.107.226.241:8051/stock/";
-            iframe.src = argumento;
-        }else if(tipo=='traspasos12'){
-            var iframe = document.getElementById("mifra");
-            argumento="http://10.107.226.241:8051/traspasos/";
-            iframe.src = argumento;
-        }else if(tipo=='tracking12'){
-            var iframe = document.getElementById("mifra");
-            argumento="http://10.107.226.241:8051/tracking/";
-            iframe.src = argumento;
-        }else if(tipo=='pkt12'){
-            var iframe = document.getElementById("mifra");
-            argumento="http://10.107.226.241:8051/pkt/";
-            iframe.src = argumento;
-        }
-            else if (tipo=='charts150'){
-                var iframe = document.getElementById("mifra");
-                argumento="http://10.107.226.241:81/clu/";
-                iframe.src = argumento;
-            } else if(tipo=='antiguedad150'){
-                var iframe = document.getElementById("mifra");
-                argumento="http://10.107.226.241:81/antiguedad/";
-                iframe.src = argumento;
-            }else if(tipo=='stock150'){
-                var iframe = document.getElementById("mifra");
-                argumento="http://10.107.226.241:81/stock/";
-                iframe.src = argumento;
-            }else if(tipo=='traspasos150'){
-                var iframe = document.getElementById("mifra");
-                argumento="http://10.107.226.241:81/traspasos/";
-                iframe.src = argumento;
-            }else if(tipo=='tracking150'){
-                var iframe = document.getElementById("mifra");
-                argumento="http://10.107.226.241:81/tracking/";
-                iframe.src = argumento;
-            }else if(tipo=='pkt150'){
-                var iframe = document.getElementById("mifra");
-                argumento="http://10.107.226.241:81/pkt/";
-                iframe.src = argumento;}
+    var iframe = document.getElementById("mifra");
+    argumento="http://10.107.226.241:8050/asdf/";
+   
+  if (tipo === 'charts') {
+    argumento = "http://10.107.226.241:8050/asdf/";
+  } else if (tipo === 'antiguedad') {
+    argumento = "http://10.107.226.241:8050/antiguedad100/";
+  } else if (tipo === 'stock') {
+    argumento = "http://10.107.226.241:8050/stock100/";
+  } else if (tipo === 'traspasos') {
+    argumento = "http://10.107.226.241:8050/traspasos/";
+  } else if (tipo === 'tracking') {
+    argumento = "http://10.107.226.241:8050/tracking100/";
+  } else if (tipo === 'pkt') {
+    argumento = "http://10.107.226.241:8050/pkt100/";
+  } else if (tipo === 'sameday') {
+    argumento = "http://10.107.226.241:8050/samedaytodes/";
+  } else if (tipo === 'capacidades') {
+    argumento = "http://10.107.226.241:8050/capacidades/";
+  } else if (tipo === 'charts12') {
+    argumento = "http://10.107.226.241:8051/clu/";
+  } else if (tipo === 'antiguedad12') {
+    argumento = "http://10.107.226.241:8051/antiguedad/";
+  } else if (tipo === 'stock12') {
+    argumento = "http://10.107.226.241:8051/stock/";
+  } else if (tipo === 'traspasos12') {
+    argumento = "http://10.107.226.241:8051/traspasos/";
+  } else if (tipo === 'tracking12') {
+    argumento = "http://10.107.226.241:8051/tracking/";
+  } else if (tipo === 'pkt12') {
+    argumento = "http://10.107.226.241:8051/pkt/";
+  } else if (tipo === 'charts150') {
+    argumento = "http://10.107.226.241:81/clu/";
+  } else if (tipo === 'antiguedad150') {
+    argumento = "http://10.107.226.241:81/antiguedad/";
+  } else if (tipo === 'stock150') {
+    argumento = "http://10.107.226.241:81/stock/";
+  } else if (tipo === 'traspasos150') {
+    argumento = "http://10.107.226.241:81/traspasos/";
+  } else if (tipo === 'tracking150') {
+    argumento = "http://10.107.226.241:81/tracking/";
+  } else if (tipo === 'pkt150') {
+    argumento = "http://10.107.226.241:81/pkt/";
+  }
+
+  // Guardar el src en localStorage
+  localStorage.setItem('iframeSrc', argumento);
+
+  // Establecer el src del iframe
+  iframe.src = argumento;
+}
+
+// Obtener el src del iframe almacenado en localStorage
+var storedSrc = localStorage.getItem('iframeSrc');
+if (storedSrc) {
+  var iframe = document.getElementById('mifra');
+  iframe.src = storedSrc;
 }
