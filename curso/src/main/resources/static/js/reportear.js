@@ -1,15 +1,15 @@
 function reportear(tipo){
     if (tipo=='charts'){
         var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/clu/";
+        argumento="http://10.107.226.241:8050/asdf/";
         iframe.src = argumento;
     } else if(tipo=='antiguedad'){
         var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/antiguedad/";
+        argumento="http://10.107.226.241:8050/antiguedad100/";
         iframe.src = argumento;
     }else if(tipo=='stock'){
         var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/stock/";
+        argumento="http://10.107.226.241:8050/stock100/";
         iframe.src = argumento;
     }else if(tipo=='traspasos'){
         var iframe = document.getElementById("mifra");
@@ -17,15 +17,15 @@ function reportear(tipo){
         iframe.src = argumento;
     }else if(tipo=='tracking'){
         var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/tracking/";
+        argumento="http://10.107.226.241:8050/tracking100/";
         iframe.src = argumento;
     }else if(tipo=='pkt'){
         var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/pkt/";
+        argumento="http://10.107.226.241:8050/pkt100/";
         iframe.src = argumento;
     }else if(tipo=='sameday'){
         var iframe = document.getElementById("mifra");
-        argumento="http://10.107.226.241:8050/sameday/";
+        argumento="http://10.107.226.241:8050/samedaytodes/";
         iframe.src = argumento;
     }
     else if(tipo=='capacidades'){

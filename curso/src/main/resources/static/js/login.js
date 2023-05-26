@@ -52,7 +52,7 @@ $(document).ready(function() {
     if(respuesta !='fail'){
         localStorage.token = respuesta;
         localStorage.email = datos.email;
-        window.location.href='usuarios.html'
+        window.location.href='charts.html'
     }
     else{
         alert('Credenciales incorrectas')

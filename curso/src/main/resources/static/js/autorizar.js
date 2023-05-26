@@ -1,7 +1,23 @@
 $(document).ready(function() {
     autorizar();
+    actualizarEmailUsr();
   });
-  
+
+function actualizarEmailUsr(){
+    var request = new XMLHttpRequest();
+    request.open('GET', 'http://10.107.226.241/apis/user?mail='+localStorage.email+'', true);
+    request.onreadystatechange = function() {
+    if (request.readyState === 4 && request.status === 200) {
+      var data = JSON.parse(request.responseText);
+      console.log(data);
+      // Aquí puedes acceder a los datos del archivo JSON
+      //console.log(data[0].FIRST_NAME);
+      //console.log('http://10.107.226.241/apis/user?mail='+localStorage.email+'');
+      document.getElementById('txt-email-usuario').outerHTML =data[0].FIRST_NAME;
+    }
+  };
+  request.send();
+  }  
 
 async function autorizar(){
     
@@ -17,7 +33,7 @@ async function autorizar(){
         //alert("acceso condecido");
     }
     else{
-        window.location.replace("denied.html");
+        window.location.replace("charts.html");
     }
 
     var request2 = new XMLHttpRequest();
