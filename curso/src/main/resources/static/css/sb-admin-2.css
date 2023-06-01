@@ -41,6 +41,16 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+:root[data-theme=light] {
+  --top-bg-color: #ffffff !important;
+  --sidebar-bg-color: #4e73df !important;
+}
+
+:root[data-theme=dark] {
+  --top-bg-color: #5e5e5e !important;
+  --sidebar-bg-color: #000000 !important;
+}
+
 *,
 *::before,
 *::after {
@@ -6414,6 +6424,12 @@ a.close.disabled {
   background-color: #4e73df !important;
 }
 
+
+.bg-sidebar {
+  background-color: var(--sidebar-bg-color)
+}
+
+
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -6492,6 +6508,14 @@ button.bg-dark:focus {
 
 .bg-white {
   background-color: #fff !important;
+}
+
+.bg-topbar {
+  background-color: var(--top-bg-color);
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
 }
 
 .bg-transparent {
