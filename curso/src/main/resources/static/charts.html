@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light" id="html">
 
 <head>
 
@@ -65,7 +65,7 @@
                     <span>Components</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="bg-sidebar-collapse py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
                         <a class="collapse-item" href="buttons.html">Buttons</a>
                         <a class="collapse-item" href="cards.html">Cards</a>
@@ -82,7 +82,7 @@
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="bg-sidebar-collapse py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="utilities-color.html">Colors</a>
                         <a class="collapse-item" href="utilities-border.html">Borders</a>
@@ -108,7 +108,7 @@
                     <span>Local 100</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="bg-sidebar-collapse py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Local 100:</h6>
                         <a class="collapse-item" onclick="reportear('charts')"><i class="fas fa-fw fa-chart-bar"></i> DD C&C</a>
                         <a class="collapse-item" onclick="reportear('antiguedad')"><i class="fa fa-hourglass-end"></i> Antigüedad</a>
@@ -128,7 +128,7 @@
                     <span>Local 150</span>
                 </a>
                 <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="bg-sidebar-collapse py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Local 150:</h6>
                         <a class="collapse-item" onclick="reportear('charts150')"><i class="fas fa-fw fa-chart-bar"></i> DD C&C</a>
                         <a class="collapse-item" onclick="reportear('antiguedad150')"><i class="fa fa-hourglass-end"></i> Antigüedad</a>
@@ -148,7 +148,7 @@
                     <span>Local 12, 400 y 600</span>
                 </a>
                 <div id="collapsePages3" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
+                    <div class="bg-sidebar-collapse py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Local 12, 400 y 600:</h6>
                         <a class="collapse-item" onclick="reportear('charts12')"><i class="fas fa-fw fa-chart-bar"></i> DD C&C</a>
                         <a class="collapse-item" onclick="reportear('antiguedad12')"><i class="fa fa-hourglass-end"></i> Antigüedad</a>
@@ -182,10 +182,10 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-topbar topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-topbar topbar static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <button id="sidebarToggleTop" class="btn btn-sidebar d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
@@ -193,10 +193,10 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                            <input type="text" class="form-control bg-search border-1 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-search" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -231,22 +231,27 @@
                         </li>
                         <!-- Nav Item -Temas -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="TemasDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-th-list fa-fw"></i>
-                                <!-- Counter - Temas -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Temas -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="TemasDropdown">
-                                <select name="select" class="select no-arrow">
-                                    <option value="value1">Value 1</option>
-                                    <option value="value2" selected>Value 2</option>
+                                <select data-choose-theme name="select" class="nav-select" id="themeselect" >
+                                    <option value="light">Claro</option>
+                                    <option value="dark">Oscuro</option>
                                     <option value="value3">Value 3</option>
                                   </select>
-                            </div>
                         </li>
+                       <!--  <script>
+                        function initThemeSelector(){
+                            const themeselector = document.getElementById("themeselect");
+                            const html = document.getElementById("html")
+
+                            function activatetheme(themeName){
+                                html.setAttribute("data-theme",themeName)
+                            }
+
+                            themeselector.addEventListener("change",()=>{
+                                activatetheme(themeselector.value);
+                            })
+                        }
+                        initThemeSelector();
+                        </script> -->
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
