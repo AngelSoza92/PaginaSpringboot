@@ -4036,6 +4036,12 @@ input[type="button"].btn-block {
   padding: 0.5rem 1rem;
 }
 
+.nav-select {
+  display: block;
+  margin-top: 25%;
+  margin-bottom: -1px;
+}
+
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
 }
