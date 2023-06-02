@@ -56,8 +56,33 @@
   --sidebar-inner-bg:#fff !important;
   --selector-bg-color:#ffffff;
   --selector-text-color:#000000;
+  --sidebar-icon-color:rgba(255, 255, 255, 0.3);
+  --sidebar-collapse-item-hover:#eaecf4;
+  --sidebar-hover-inner-text-color:#000000;
 }
 
+
+[data-theme=Eva-01] {
+  --top-bg-color: #734f9a !important;
+  --sidebar-bg-color: #734f9a !important;
+  --btn-search-color:#e6770b;
+  --btn-search-background-color:#734f9a;
+  --btn-search-border-color:#000000;
+  --search-bg-color:#3f6d4e !important;
+  --btn-sidebar-color:#e6770b;
+  --btn-sidebar-hover-color:#000000;
+  --btn-focus-box-shadow:0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  --sidebar-text-color:#e6770b;
+  --sidebar-inner-text-color:#e6770b;
+  --sidebar-inner-bg:#3f6d4e !important;
+  --selector-bg-color:#734f9a;
+  --selector-text-color:#e6770b;
+  --sidebar-icon-color:#e6770b;
+  --sidebar-collapse-item-hover:#e6770b;
+  --sidebar-hover-inner-text-color:#000000;
+  --search-border-color:#000000;
+  --selector-border-color:#000000;
+}
 
 [data-theme=dark] {
   --top-bg-color: #000000 !important;
@@ -74,6 +99,10 @@
   --sidebar-inner-bg:#00000063 !important;
   --selector-bg-color:#000000;
   --selector-text-color:#ffffff;
+  --sidebar-icon-color:#ffffff;
+  --sidebar-collapse-item-hover:#ffffff;
+  --sidebar-hover-inner-text-color:#000000;
+  --search-border-color:#ffffff;
 }
 
 *,
@@ -4096,6 +4125,7 @@ input[type="button"].btn-block {
   margin-top: 25%;
   margin-bottom: -1px;
   background-color: var(--selector-bg-color);
+  border-color: var(--selector-border-color);
   color: var(--selector-text-color);
   /* appearance: none;
   -webkit-appearance: none;
@@ -6558,6 +6588,7 @@ button.bg-danger:focus {
 
 .bg-search {
   background-color: var(--search-bg-color);
+  border-color: var(--search-border-color);
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -10494,7 +10525,8 @@ a:focus {
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-  background-color: #eaecf4;
+  background-color: var(--sidebar-collapse-item-hover);
+  color: var(--sidebar-hover-inner-text-color);
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
@@ -10792,8 +10824,7 @@ a:focus {
 }
 
 .sidebar-dark .nav-item .nav-link i {
-  color: rgba(255, 255, 255, 0.3);
-}
+  color: var(--sidebar-icon-color)}
 
 .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:hover {
   color: #fff;
