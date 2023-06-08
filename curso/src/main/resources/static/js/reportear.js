@@ -1,49 +1,52 @@
 function reportear(tipo){
     var iframe = document.getElementById("mifra");
-    argumento="http://10.107.226.241:8050/asdf/";
+    const container = document.getElementById('html');
+    const datatheme = "datatheme="+container.getAttribute('data-theme')
+    console.log(datatheme)
+    argumento="http://10.107.226.241:8050/asdf/?"+datatheme;
    
   if (tipo === 'charts') {
-    argumento = "http://10.107.226.241:8050/asdf/";
+    argumento = "http://10.107.226.241:8050/asdf/?"+datatheme;
   } else if (tipo === 'antiguedad') {
-    argumento = "http://10.107.226.241:8050/antiguedad100/";
+    argumento = "http://10.107.226.241:8050/antiguedad100/?"+datatheme;
   } else if (tipo === 'stock') {
-    argumento = "http://10.107.226.241:8050/stock100/";
+    argumento = "http://10.107.226.241:8050/stock100/?"+datatheme;
   } else if (tipo === 'traspasos') {
-    argumento = "http://10.107.226.241:8050/traspasos100/";
+    argumento = "http://10.107.226.241:8050/traspasos100/?"+datatheme;
   } else if (tipo === 'tracking') {
-    argumento = "http://10.107.226.241:8050/tracking100/";
+    argumento = "http://10.107.226.241:8050/tracking100/?"+datatheme;
   } else if (tipo === 'pkt') {
-    argumento = "http://10.107.226.241:8050/pkt100/";
+    argumento = "http://10.107.226.241:8050/pkt100/?"+datatheme;
   } else if (tipo === 'sameday') {
-    argumento = "http://10.107.226.241:8050/samedaytodes/";
+    argumento = "http://10.107.226.241:8050/samedaytodes/?"+datatheme;
   } else if (tipo === 'capacidades') {
-    argumento = "http://10.107.226.241:8050/capacidades/";
+    argumento = "http://10.107.226.241:8050/capacidades/?"+datatheme;
   } else if (tipo === 'charts12') {
-    argumento = "http://10.107.226.241:8050/clu12/";
+    argumento = "http://10.107.226.241:8050/clu12/?"+datatheme;
   } else if (tipo === 'antiguedad12') {
-    argumento = "http://10.107.226.241:8050/antiguedad12/";
+    argumento = "http://10.107.226.241:8050/antiguedad12/?"+datatheme;
   } else if (tipo === 'stock12') {
-    argumento = "http://10.107.226.241:8050/stock12/";
+    argumento = "http://10.107.226.241:8050/stock12/?"+datatheme;
   } else if (tipo === 'traspasos12') {
-    argumento = "http://10.107.226.241:8050/traspasos12/";
+    argumento = "http://10.107.226.241:8050/traspasos12/?"+datatheme;
   } else if (tipo === 'tracking12') {
-    argumento = "http://10.107.226.241:8050/tracking12/";
+    argumento = "http://10.107.226.241:8050/tracking12/?"+datatheme;
   } else if (tipo === 'pkt12') {
-    argumento = "http://10.107.226.241:8050/pkt12/";
+    argumento = "http://10.107.226.241:8050/pkt12/?"+datatheme;
   } else if (tipo === 'charts150') {
-    argumento = "http://10.107.226.241:8050/clu150/";
+    argumento = "http://10.107.226.241:8050/clu150/?"+datatheme;
   } else if (tipo === 'antiguedad150') {
-    argumento = "http://10.107.226.241:8050/antiguedad150/";
+    argumento = "http://10.107.226.241:8050/antiguedad150/?"+datatheme;
   } else if (tipo === 'stock150') {
-    argumento = "http://10.107.226.241:8050/stock150/";
+    argumento = "http://10.107.226.241:8050/stock150/?"+datatheme;
   } else if (tipo === 'traspasos150') {
-    argumento = "http://10.107.226.241:8050/traspasos150/";
+    argumento = "http://10.107.226.241:8050/traspasos150/?"+datatheme;
   } else if (tipo === 'tracking150') {
-    argumento = "http://10.107.226.241:8050/tracking150/";
+    argumento = "http://10.107.226.241:8050/tracking150/?"+datatheme;
   } else if (tipo === 'pkt150') {
-    argumento = "http://10.107.226.241:8050/pkt150/";
+    argumento = "http://10.107.226.241:8050/pkt150/?"+datatheme;
   } else if (tipo === 'despachosbodegas') {
-    argumento = "http://10.107.226.241:8050/despachosbodegas/";
+    argumento = "http://10.107.226.241:8050/despachosbodegas/?"+datatheme;
   }
 
   // Guardar el src en localStorage
