@@ -72,5 +72,9 @@ iframe.onload = function() {
   link.href = "http://10.107.226.241/etiquetero/css/sb-admin-2.css";      /**** your CSS file ****/ 
   link.rel = "stylesheet"; 
   link.type = "text/css"; 
+  let theme = document.querySelector("html");
+  theme.setAttribute("data-theme", datatheme)
+  let body = document.querySelector("body");
+  theme.setAttribute("data-theme", "dark")
   frames[0].document.head.appendChild(link); /**** 0 is an index of your iframe ****/ 
 }
