@@ -66,3 +66,11 @@ if (storedSrc) {
   var iframe = document.getElementById('mifra');
   iframe.src = storedSrc;
 }
+
+iframe.onload = function() {
+  let link = document.createElement("link");
+  link.href = "http://10.107.226.241/etiquetero/css/sb-admin-2.css";      /**** your CSS file ****/ 
+  link.rel = "stylesheet"; 
+  link.type = "text/css"; 
+  frames[0].document.head.appendChild(link); /**** 0 is an index of your iframe ****/ 
+}
