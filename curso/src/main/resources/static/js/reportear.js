@@ -47,6 +47,10 @@ function reportear(tipo){
     argumento = "http://10.107.226.241:8050/pkt150/?"+datatheme;
   } else if (tipo === 'despachosbodegas') {
     argumento = "http://10.107.226.241:8050/despachosbodegas/?"+datatheme;
+  } else if (tipo === 'dotero') {
+    argumento = "http://10.107.226.241/etiquetero/dotero/?"+datatheme;
+  } else if (tipo === 'etiquetero') {
+    argumento = "http://10.107.226.241/etiquetero/?"+datatheme;
   }
 
   // Guardar el src en localStorage
