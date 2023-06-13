@@ -58,13 +58,8 @@ function reportear(tipo){
 
   // Establecer el src del iframe
   iframe.src = argumento;
-}
 
-// Obtener el src del iframe almacenado en localStorage
-var storedSrc = localStorage.getItem('iframeSrc');
-if (storedSrc) {
-  var iframe = document.getElementById('mifra');
-  iframe.src = storedSrc;
+ 
 }
 
 iframe.onload = function() {
@@ -72,9 +67,12 @@ iframe.onload = function() {
   link.href = "http://10.107.226.241/etiquetero/css/sb-admin-2.css";      /**** your CSS file ****/ 
   link.rel = "stylesheet"; 
   link.type = "text/css"; 
-  let theme = document.querySelector("html");
-  theme.setAttribute("data-theme", datatheme)
-  let body = document.querySelector("body");
-  theme.setAttribute("data-theme", "dark")
   frames[0].document.head.appendChild(link); /**** 0 is an index of your iframe ****/ 
 }
+// Obtener el src del iframe almacenado en localStorage
+var storedSrc = localStorage.getItem('iframeSrc');
+if (storedSrc) {
+  var iframe = document.getElementById('mifra');
+  iframe.src = storedSrc;
+}
+

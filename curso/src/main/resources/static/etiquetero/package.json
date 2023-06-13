@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "html2canvas": "^1.4.1",
-    "merge-images": "^2.0.0",
-    "print-js": "^1.6.0",
-    "zpl-image": "^0.2.0"
-  }
-}
