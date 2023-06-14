@@ -2,8 +2,9 @@ function reportear(tipo){
     var iframe = document.getElementById("mifra");
     const container = document.getElementById('html');
     const datatheme = "datatheme="+container.getAttribute('data-theme')
+    theme = container.getAttribute('data-theme')
     console.log(datatheme)
-    argumento="http://10.107.226.241:8050/asdf/?"+datatheme;
+    argumento="http://10.107.226.241:8050/asdf/#"+datatheme;
    
   if (tipo === 'charts') {
     argumento = "http://10.107.226.241:8050/asdf/?"+datatheme;
@@ -48,9 +49,9 @@ function reportear(tipo){
   } else if (tipo === 'despachosbodegas') {
     argumento = "http://10.107.226.241:8050/despachosbodegas/?"+datatheme;
   } else if (tipo === 'dotero') {
-    argumento = "http://10.107.226.241/etiquetero/dotero/?"+datatheme;
+    argumento = "http://10.107.226.241/etiquetero/dotero/#"+theme;
   } else if (tipo === 'etiquetero') {
-    argumento = "http://10.107.226.241/etiquetero/?"+datatheme;
+    argumento = "http://10.107.226.241/etiquetero/#"+theme;
   }
 
   // Guardar el src en localStorage
@@ -71,6 +72,20 @@ iframe.onload = function() {
   let frhtml = frames[0].document.getElementsByTagName('html')
   console.log(frhtml)
 }
+
+iframe.onload = sendData()
+
+function sendData(e) {
+  try {
+              e.preventDefault();;
+              var myIfr = iframe.contentWindow;
+              myIfr.postMessage(theme, '*')
+
+  } catch (e) {
+      console.log('Error: ' + e.message);
+  }
+}
+
 // Obtener el src del iframe almacenado en localStorage
 var storedSrc = localStorage.getItem('iframeSrc');
 if (storedSrc) {
