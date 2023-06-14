@@ -20,7 +20,7 @@ function reportear(tipo){
   } else if (tipo === 'sameday') {
     argumento = "http://10.107.226.241:8050/samedaytodes/?"+datatheme;
   } else if (tipo === 'capacidades') {
-    argumento = "http://10.107.226.241:8050/capacidades/?"+datatheme;
+    argumento = "http://10.107.226.241:8050/capacidadestodes/?"+datatheme;
   } else if (tipo === 'charts12') {
     argumento = "http://10.107.226.241:8050/clu12/?"+datatheme;
   } else if (tipo === 'antiguedad12') {
