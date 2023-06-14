@@ -68,6 +68,8 @@ iframe.onload = function() {
   link.rel = "stylesheet"; 
   link.type = "text/css"; 
   frames[0].document.head.appendChild(link); /**** 0 is an index of your iframe ****/ 
+  let frhtml = frames[0].document.getElementsByTagName('html')
+  console.log(frhtml)
 }
 // Obtener el src del iframe almacenado en localStorage
 var storedSrc = localStorage.getItem('iframeSrc');
