@@ -3,7 +3,6 @@ function reportear(tipo){
     const container = document.getElementById('html');
     const datatheme = "datatheme="+container.getAttribute('data-theme')
     theme = container.getAttribute('data-theme')
-    console.log(datatheme)
     argumento="http://10.107.226.241:8050/asdf/#"+datatheme;
    
   if (tipo === 'charts') {
@@ -51,7 +50,7 @@ function reportear(tipo){
   } else if (tipo === 'dotero') {
     argumento = "http://10.107.226.241/etiquetero/dotero/#"+theme;
   } else if (tipo === 'etiquetero') {
-    argumento = "http://10.107.226.241/etiquetero/#"+theme;
+    argumento = "http://10.107.226.241/etiquetero/indextest.html#"+theme;
   }
 
   // Guardar el src en localStorage
@@ -63,28 +62,21 @@ function reportear(tipo){
  
 }
 
+var iframe = document.getElementById("mifra");
+
 iframe.onload = function() {
   let link = document.createElement("link");
+  let link2 = document.createElement("link");
   link.href = "http://10.107.226.241/etiquetero/css/sb-admin-2.css";      /**** your CSS file ****/ 
   link.rel = "stylesheet"; 
   link.type = "text/css"; 
-  frames[0].document.head.appendChild(link); /**** 0 is an index of your iframe ****/ 
-  let frhtml = frames[0].document.getElementsByTagName('html')
-  console.log(frhtml)
+  link2.href = "http://10.107.226.241/etiquetero/css/all.min.css"
+  link2.rel = "stylesheet"; 
+  link2.type = "text/css"; 
+  frames[0].document.head.appendChild(link);
+  frames[0].document.head.appendChild(link2); /**** 0 is an index of your iframe ****/ 
 }
 
-iframe.onload = sendData()
-
-function sendData(e) {
-  try {
-              e.preventDefault();;
-              var myIfr = iframe.contentWindow;
-              myIfr.postMessage(theme, '*')
-
-  } catch (e) {
-      console.log('Error: ' + e.message);
-  }
-}
 
 // Obtener el src del iframe almacenado en localStorage
 var storedSrc = localStorage.getItem('iframeSrc');
