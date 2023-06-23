@@ -12,6 +12,7 @@ themeselector.addEventListener("change",async ()=>{
   hash = "#"+theme
   argumento = url+hash
   console.log(argumento)
+  await sleep(500)
   iframe.src = argumento
  
   var test = document.getElementById('mifra');
@@ -83,19 +84,19 @@ return url;
 
 var iframe = document.getElementById("mifra");
 
-iframe.onload = function() {
+/**** iframe.onload = function() {
   let link = document.createElement("link");
   let link2 = document.createElement("link");
-  link.href = "http://10.107.226.241/etiquetero/css/sb-admin-2.css";      /**** your CSS file ****/ 
+  link.href = "http://10.107.226.241/etiquetero/css/sb-admin-2.css";    
   link.rel = "stylesheet"; 
   link.type = "text/css"; 
   link2.href = "http://10.107.226.241/etiquetero/css/all.min.css"
   link2.rel = "stylesheet"; 
   link2.type = "text/css"; 
   frames[0].document.head.appendChild(link);
-  frames[0].document.head.appendChild(link2); /**** 0 is an index of your iframe ****/ 
+  frames[0].document.head.appendChild(link2);
 }
-
+ ****/
 
 // Obtener el src del iframe almacenado en localStorage
 var storedSrc = localStorage.getItem('iframeSrc');
